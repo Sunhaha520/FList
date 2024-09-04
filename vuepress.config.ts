@@ -42,5 +42,16 @@ export default defineUserConfig({
         maxDeep: 10
       }),
     },
+    {
+      // 挂载路径
+      mountPath: "/",
+      // 文件解析器，这里使用githubReleasesFilesAnalysis,可以解析github的release文件
+      analysis: githubReleasesFilesAnalysis({
+        // 仓库所有者的用户名
+        user: "sunhaha520",
+        // 仓库所有者的仓库名
+        repository: "FList"
+      }),
+    },
   ])
 })
